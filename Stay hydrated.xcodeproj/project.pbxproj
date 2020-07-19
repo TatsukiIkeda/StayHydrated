@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D845EA3024C35A5F00538CD2 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845EA2F24C35A5F00538CD2 /* CityModel.swift */; };
+		D845EA3224C35A7800538CD2 /* CityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845EA3124C35A7800538CD2 /* CityList.swift */; };
 		D8EEEB2324C0B891007063B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEEB2224C0B891007063B5 /* AppDelegate.swift */; };
 		D8EEEB2524C0B891007063B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEEB2424C0B891007063B5 /* SceneDelegate.swift */; };
 		D8EEEB2724C0B891007063B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EEEB2624C0B891007063B5 /* ViewController.swift */; };
 		D8EEEB2A24C0B891007063B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EEEB2824C0B891007063B5 /* Main.storyboard */; };
 		D8EEEB2C24C0B892007063B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8EEEB2B24C0B892007063B5 /* Assets.xcassets */; };
 		D8EEEB2F24C0B892007063B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EEEB2D24C0B892007063B5 /* LaunchScreen.storyboard */; };
+		D95C2A845AA5F4C5B13B24A7 /* Pods_Stay_hydrated.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D2803026C15572E9F31B60 /* Pods_Stay_hydrated.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68D2803026C15572E9F31B60 /* Pods_Stay_hydrated.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stay_hydrated.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55C2942473DA0586313EBE7 /* Pods-Stay hydrated.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stay hydrated.release.xcconfig"; path = "Target Support Files/Pods-Stay hydrated/Pods-Stay hydrated.release.xcconfig"; sourceTree = "<group>"; };
+		D845EA2F24C35A5F00538CD2 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		D845EA3124C35A7800538CD2 /* CityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityList.swift; sourceTree = "<group>"; };
 		D8EEEB1F24C0B891007063B5 /* Stay hydrated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stay hydrated.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8EEEB2224C0B891007063B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8EEEB2424C0B891007063B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,7 @@
 		D8EEEB2B24C0B892007063B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8EEEB2E24C0B892007063B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8EEEB3024C0B892007063B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC161BE992433B4E29DCC115 /* Pods-Stay hydrated.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stay hydrated.debug.xcconfig"; path = "Target Support Files/Pods-Stay hydrated/Pods-Stay hydrated.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95C2A845AA5F4C5B13B24A7 /* Pods_Stay_hydrated.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63A1C88B83B98DFB4E1C3F65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68D2803026C15572E9F31B60 /* Pods_Stay_hydrated.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		788F7D786687A89655B0FCB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC161BE992433B4E29DCC115 /* Pods-Stay hydrated.debug.xcconfig */,
+				B55C2942473DA0586313EBE7 /* Pods-Stay hydrated.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D8EEEB1624C0B891007063B5 = {
 			isa = PBXGroup;
 			children = (
 				D8EEEB2124C0B891007063B5 /* Stay hydrated */,
 				D8EEEB2024C0B891007063B5 /* Products */,
+				788F7D786687A89655B0FCB9 /* Pods */,
+				63A1C88B83B98DFB4E1C3F65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +84,41 @@
 		D8EEEB2124C0B891007063B5 /* Stay hydrated */ = {
 			isa = PBXGroup;
 			children = (
+				D8EEEB3824C0B907007063B5 /* Controller */,
+				D8EEEB3724C0B8F5007063B5 /* Model */,
+				D8EEEB3624C0B8DD007063B5 /* View */,
 				D8EEEB2224C0B891007063B5 /* AppDelegate.swift */,
 				D8EEEB2424C0B891007063B5 /* SceneDelegate.swift */,
-				D8EEEB2624C0B891007063B5 /* ViewController.swift */,
-				D8EEEB2824C0B891007063B5 /* Main.storyboard */,
 				D8EEEB2B24C0B892007063B5 /* Assets.xcassets */,
 				D8EEEB2D24C0B892007063B5 /* LaunchScreen.storyboard */,
 				D8EEEB3024C0B892007063B5 /* Info.plist */,
 			);
 			path = "Stay hydrated";
+			sourceTree = "<group>";
+		};
+		D8EEEB3624C0B8DD007063B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8EEEB2824C0B891007063B5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8EEEB3724C0B8F5007063B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D845EA2F24C35A5F00538CD2 /* CityModel.swift */,
+				D845EA3124C35A7800538CD2 /* CityList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8EEEB3824C0B907007063B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8EEEB2624C0B891007063B5 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8EEEB3324C0B892007063B5 /* Build configuration list for PBXNativeTarget "Stay hydrated" */;
 			buildPhases = (
+				7637E4DB7DFF56826AAECD08 /* [CP] Check Pods Manifest.lock */,
 				D8EEEB1B24C0B891007063B5 /* Sources */,
 				D8EEEB1C24C0B891007063B5 /* Frameworks */,
 				D8EEEB1D24C0B891007063B5 /* Resources */,
+				1B4E6627BFF49F06A7C48814 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +189,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B4E6627BFF49F06A7C48814 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stay hydrated/Pods-Stay hydrated-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stay hydrated/Pods-Stay hydrated-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stay hydrated/Pods-Stay hydrated-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7637E4DB7DFF56826AAECD08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stay hydrated-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D8EEEB1B24C0B891007063B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D845EA3024C35A5F00538CD2 /* CityModel.swift in Sources */,
 				D8EEEB2724C0B891007063B5 /* ViewController.swift in Sources */,
 				D8EEEB2324C0B891007063B5 /* AppDelegate.swift in Sources */,
 				D8EEEB2524C0B891007063B5 /* SceneDelegate.swift in Sources */,
+				D845EA3224C35A7800538CD2 /* CityList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +382,7 @@
 		};
 		D8EEEB3424C0B892007063B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC161BE992433B4E29DCC115 /* Pods-Stay hydrated.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +395,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikeda.Stay-hydrated";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D8EEEB3524C0B892007063B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B55C2942473DA0586313EBE7 /* Pods-Stay hydrated.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikeda.Stay-hydrated";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
