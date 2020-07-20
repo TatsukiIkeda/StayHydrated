@@ -32,7 +32,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     var graphHdata: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     
-    let dataList:[(text: String, ryou: Int)] = [("手動入力", 0),("コップ半分 100ml", 100),("湯飲み1杯 120ml", 120),("コーヒーコップ1杯 150ml", 150),("コップ1杯 200ml", 200),("ペットボトル半分 250ml", 250),("ペットボトル１本 500ml", 500)]
+    let dataList:[(text: String, amount: Int)] = [("ひと口　20ml", 20),("コップ半分 100ml", 100),("湯飲み1杯 120ml", 120),("コーヒーコップ1杯 150ml", 150),("コップ1杯 200ml", 200),("ペットボトル半分 250ml", 250),("ペットボトル１本 500ml", 500)]
     
     var result = 0
     var inputValue = 0
@@ -158,7 +158,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         if pickerView.tag == 1 {
             urlData = cityList.list[row].code
         }else if pickerView.tag == 2 {
-            inputValue = dataList[row].ryou
+            inputValue = dataList[row].amount
         }
     }
     
@@ -238,7 +238,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                 }
                 
                 if weather != nil {
-                    self.weather = weather!
+                    self.weather = "天気は\(weather!)です"
                 } else {
                     self.weather = "No Data"
                 }
@@ -250,7 +250,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                 }
 //
                 self.setWeatherData(row: 0)
-//                self.allSave()
+                self.allSave()
             case .failure(let error):
                 print(error)
             }
@@ -261,25 +261,37 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     private func setWeatherData(row: Int) {
         weatherLabel.text = weather
         //最高気温表示
-        maximumTemperatureLabel.text =  "\(high)°"
-        
+        maximumTemperatureLabel.text =  "最高気温は\(high)°です"
+        print(high)
         var highInt = 0
         highInt = Int(high)!
         //WBGT指数判定・表示
         if highInt > 31 {
-            wbgtLabel.text = "危険"
+            wbgtLabel.text = "暑さ指数:危険"
+            wbgtLabel.backgroundColor = .red
+            wbgtLabel.textColor = .white
         }else if highInt > 28 {
-            wbgtLabel.text = "厳重警戒"
+            wbgtLabel.text = "暑さ指数:厳重警戒"
+            wbgtLabel.backgroundColor = .orange
+            wbgtLabel.textColor = .black
         }else if highInt > 25 {
-            wbgtLabel.text = "警戒"
+            wbgtLabel.text = "暑さ指数:警戒"
+            wbgtLabel.backgroundColor = .yellow
+            wbgtLabel.textColor = .black
         }else if highInt > 21 {
-            wbgtLabel.text = "注意"
+            wbgtLabel.text = "暑さ指数:注意"
+            wbgtLabel.backgroundColor = .cyan
+            wbgtLabel.textColor = .black
         }else{
-            wbgtLabel.text = "ぼぼ安全"
+            wbgtLabel.text = "暑さ指数:ぼぼ安全"
+            wbgtLabel.backgroundColor = .blue
+            wbgtLabel.textColor = .white
         }
         if "\(high)" == "0" {
-            maximumTemperatureLabel.text = "この時間帯では"
+            maximumTemperatureLabel.text = "この時間帯は"
             wbgtLabel.text = "取得できません"
+            maximumTemperatureLabel.backgroundColor = .yellow
+            wbgtLabel.backgroundColor = .yellow
         }
     }
     func wbgtJudgment() {
