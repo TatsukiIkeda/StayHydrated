@@ -74,7 +74,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                             </textField>
                             <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mKr-Qk-H7m">
-                                <rect key="frame" x="156" y="555" width="258" height="183"/>
+                                <rect key="frame" x="173" y="555" width="241" height="183"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ln-FC-WRs">
@@ -95,7 +95,10 @@
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="tintColor" red="0.87085026499999996" green="0.93257170919999999" blue="0.98432320360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="始める"/>
+                                <state key="normal" title="初期化"/>
+                                <connections>
+                                    <action selector="initializationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKo-OL-z78"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日の目標水分摂取量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uof-K9-IuV">
                                 <rect key="frame" x="0.0" y="555" width="174" height="41"/>
@@ -105,38 +108,47 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59A-Ym-KVj">
-                                <rect key="frame" x="85" y="436" width="226" height="130"/>
+                                <rect key="frame" x="132" y="430" width="146" height="117"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-5R-NXF">
-                                <rect key="frame" x="326" y="436" width="80" height="111"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最高気温" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qg-c9-bvZ">
+                                <rect key="frame" x="11" y="477" width="137" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="決定"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日の天気" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1np-yZ-Brb">
+                                <rect key="frame" x="11" y="436" width="137" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="熱中症指数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytC-Mf-pGQ">
+                                <rect key="frame" x="11" y="524" width="137" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-5R-NXF">
+                                <rect key="frame" x="286" y="457" width="117" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="天気予報"/>
                                 <connections>
                                     <action selector="decisionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HhP-wz-0hD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日の天気" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1np-yZ-Brb">
-                                <rect key="frame" x="11" y="444" width="93" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最高気温" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qg-c9-bvZ">
-                                <rect key="frame" x="11" y="477" width="79" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92173141240000001" green="0.95628660919999997" blue="0.99608558420000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="CityPickerView" destination="59A-Ym-KVj" id="w1y-sE-TyQ"/>
+                        <outlet property="WeatherButton" destination="daP-5R-NXF" id="E8E-xV-nkN"/>
                         <outlet property="barChartView" destination="HAD-7i-Azc" id="1d2-3J-5OE"/>
                         <outlet property="fixButton" destination="prO-6k-TiX" id="0XX-V3-Yjm"/>
                         <outlet property="goalTargeLabel" destination="Ufo-Ed-yaV" id="b1S-o0-vTC"/>
@@ -147,7 +159,8 @@
                         <outlet property="targetTextField" destination="aBk-96-gu6" id="D9Q-iK-JZi"/>
                         <outlet property="totalIntakeLabel" destination="deS-72-D59" id="dOx-tY-FF7"/>
                         <outlet property="waterIntakeButton" destination="8Ln-FC-WRs" id="bbK-dn-Hdx"/>
-                        <outlet property="weatherLabel" destination="1np-yZ-Brb" id="QEg-JA-gGy"/>
+                        <outlet property="wbgtLabel" destination="ytC-Mf-pGQ" id="9G3-Bi-OWF"/>
+                        <outlet property="weatherLabel" destination="1np-yZ-Brb" id="oOL-yI-HyN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
