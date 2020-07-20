@@ -15,86 +15,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAD-7i-Azc" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="50" width="414" height="317"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBj-0p-xEX" userLabel="Base View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <color key="backgroundColor" red="0.87085026499999996" green="0.93257170919999999" blue="0.98432320360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAD-7i-Azc" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="50" width="414" height="319"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prO-6k-TiX">
-                                <rect key="frame" x="180" y="776" width="117" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99966067079999998" green="0.83544176820000005" blue="0.83136636019999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="記録を修正"/>
-                                <connections>
-                                    <action selector="returnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUl-3O-Cj1"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目標水分摂取量" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufo-Ed-yaV">
-                                <rect key="frame" x="39" y="417" width="122" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.54502481219999999" green="0.74758428340000005" blue="0.50976663830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日の目標" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uof-K9-IuV">
+                                <rect key="frame" x="0.0" y="369" width="207" height="48"/>
+                                <color key="backgroundColor" red="0.94115895029999996" green="0.9332776666" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="合計摂取量" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deS-72-D59">
-                                <rect key="frame" x="211" y="423" width="119" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水分摂食量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CS-JA-OKk">
+                                <rect key="frame" x="207" y="369" width="207" height="48"/>
+                                <color key="backgroundColor" red="0.94115895029999996" green="0.9332776666" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2500 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufo-Ed-yaV">
+                                <rect key="frame" x="0.0" y="417" width="207" height="32"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="0.54502481219999999" green="0.74758428340000005" blue="0.50976663830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdS-dv-LhX">
-                                <rect key="frame" x="88" y="776" width="90" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="目標設定"/>
-                                <connections>
-                                    <action selector="goalTargeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7SM-uY-nO3"/>
-                                </connections>
-                            </button>
-                            <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mKr-Qk-H7m">
-                                <rect key="frame" x="180" y="457" width="234" height="219"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deS-72-D59">
+                                <rect key="frame" x="207" y="417" width="207" height="32"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.54502481219999999" green="0.74758428340000005" blue="0.50976663830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKr-Qk-H7m">
+                                <rect key="frame" x="145" y="449" width="269" height="239.5"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ln-FC-WRs">
-                                <rect key="frame" x="297" y="776" width="117" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.87085026499999996" green="0.93257170919999999" blue="0.98432320360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="記録する">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="waterIntakeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hHc-Kf-Qzs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVx-Ea-rNT">
-                                <rect key="frame" x="0.0" y="781" width="88" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="tintColor" red="0.87085026499999996" green="0.93257170919999999" blue="0.98432320360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="リセット"/>
-                                <connections>
-                                    <action selector="initializationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKo-OL-z78"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日の目標" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uof-K9-IuV">
-                                <rect key="frame" x="20" y="373" width="183" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="摂取量を選択して記録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYS-U3-LFo">
+                                <rect key="frame" x="165.5" y="688.5" width="248.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59A-Ym-KVj">
-                                <rect key="frame" x="0.0" y="597" width="172" height="117"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="目標を入力" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBk-96-gu6">
+                                <rect key="frame" x="228.5" y="722.5" width="165.5" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日の天気" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1np-yZ-Brb">
+                                <rect key="frame" x="0.0" y="469" width="207" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最高気温" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qg-c9-bvZ">
+                                <rect key="frame" x="0.0" y="509" width="145" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暑さ指数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytC-Mf-pGQ">
+                                <rect key="frame" x="0.0" y="549" width="145" height="39.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59A-Ym-KVj">
+                                <rect key="frame" x="0.0" y="588.5" width="165.5" height="120"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-5R-NXF">
-                                <rect key="frame" x="3" y="718" width="117" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在地を選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkw-2f-RLI">
+                                <rect key="frame" x="20" y="708.5" width="124" height="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-5R-NXF">
+                                <rect key="frame" x="20" y="736.5" width="124" height="40"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="天気を調べる"/>
@@ -102,63 +101,120 @@
                                     <action selector="decisionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HhP-wz-0hD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最高気温" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qg-c9-bvZ">
-                                <rect key="frame" x="0.0" y="519" width="161" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日の天気" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1np-yZ-Brb">
-                                <rect key="frame" x="0.0" y="474" width="158" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="暑さ指数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytC-Mf-pGQ">
-                                <rect key="frame" x="-2" y="566" width="163" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AF-Zd-aMr">
-                                <rect key="frame" x="169" y="417" width="34" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgC-j9-nd8">
-                                <rect key="frame" x="332" y="421" width="34" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="飲んだ摂取量を選択" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYS-U3-LFo">
-                                <rect key="frame" x="217" y="648" width="171" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="目標を入力" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBk-96-gu6">
-                                <rect key="frame" x="128" y="730" width="169" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="done"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="水分摂食量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CS-JA-OKk">
-                                <rect key="frame" x="211" y="373" width="183" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gJs-kb-Lpq">
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVx-Ea-rNT">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="リセット"/>
+                                        <connections>
+                                            <action selector="initializationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKo-OL-z78"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdS-dv-LhX">
+                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="80"/>
+                                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="目標変更"/>
+                                        <connections>
+                                            <action selector="goalTargeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7SM-uY-nO3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prO-6k-TiX">
+                                        <rect key="frame" x="207" y="0.0" width="103.5" height="80"/>
+                                        <color key="backgroundColor" red="0.99966067079999998" green="0.83544176820000005" blue="0.83136636019999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="記録を修正"/>
+                                        <connections>
+                                            <action selector="returnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUl-3O-Cj1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ln-FC-WRs">
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="80"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="記録する">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="waterIntakeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hHc-Kf-Qzs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.92173141240000001" green="0.95628660919999997" blue="0.99608558420000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ytC-Mf-pGQ" firstAttribute="top" secondItem="1Qg-c9-bvZ" secondAttribute="bottom" id="0B2-cj-irN"/>
+                            <constraint firstItem="5CS-JA-OKk" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.5" id="1It-29-OSv"/>
+                            <constraint firstItem="mKr-Qk-H7m" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.3" id="1nA-xk-Wse"/>
+                            <constraint firstItem="5CS-JA-OKk" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.06" id="2MV-4o-GhP"/>
+                            <constraint firstItem="HAD-7i-Azc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3h7-c0-VOz"/>
+                            <constraint firstItem="HAD-7i-Azc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3lj-MP-SP1"/>
+                            <constraint firstItem="mKr-Qk-H7m" firstAttribute="top" secondItem="Ufo-Ed-yaV" secondAttribute="bottom" id="4m9-fB-0um"/>
+                            <constraint firstItem="ytC-Mf-pGQ" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.05" id="5Cy-jy-C02"/>
+                            <constraint firstItem="kkw-2f-RLI" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.01" id="5Kn-f9-XM3"/>
+                            <constraint firstItem="daP-5R-NXF" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.05" id="6iX-9r-boR"/>
+                            <constraint firstItem="pYS-U3-LFo" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.6" id="7Ze-2B-sg7"/>
+                            <constraint firstItem="59A-Ym-KVj" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.4" id="8Yy-hE-S1q"/>
+                            <constraint firstItem="daP-5R-NXF" firstAttribute="top" secondItem="kkw-2f-RLI" secondAttribute="bottom" constant="20" id="AhI-f0-zWb"/>
+                            <constraint firstItem="gJs-kb-Lpq" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.1" id="AiY-JT-b0I"/>
+                            <constraint firstItem="pYS-U3-LFo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BKL-fn-2pW"/>
+                            <constraint firstItem="mKr-Qk-H7m" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BmE-Hg-BP5"/>
+                            <constraint firstItem="pYS-U3-LFo" firstAttribute="top" secondItem="mKr-Qk-H7m" secondAttribute="bottom" id="EjF-jA-cb1"/>
+                            <constraint firstItem="mKr-Qk-H7m" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.65" id="Fqp-nj-cZQ"/>
+                            <constraint firstItem="1np-yZ-Brb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fy3-5j-jXn"/>
+                            <constraint firstItem="ytC-Mf-pGQ" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.35" id="GFJ-eS-rxr"/>
+                            <constraint firstItem="uof-K9-IuV" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.5" id="HdE-aG-lEx"/>
+                            <constraint firstItem="HAD-7i-Azc" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.4" id="MFV-se-mM5"/>
+                            <constraint firstItem="1Qg-c9-bvZ" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.35" id="MNY-qd-CLk"/>
+                            <constraint firstItem="uof-K9-IuV" firstAttribute="top" secondItem="HAD-7i-Azc" secondAttribute="bottom" id="MmD-tJ-qTX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CBj-0p-xEX" secondAttribute="bottom" constant="20" id="Pft-rH-2y4"/>
+                            <constraint firstItem="1np-yZ-Brb" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.5" id="Pwf-NO-Rd7"/>
+                            <constraint firstItem="kkw-2f-RLI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QqH-xw-It3"/>
+                            <constraint firstItem="1Qg-c9-bvZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qsh-SB-631"/>
+                            <constraint firstItem="pYS-U3-LFo" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.03" id="Rfb-w7-X1u"/>
+                            <constraint firstItem="1Qg-c9-bvZ" firstAttribute="top" secondItem="1np-yZ-Brb" secondAttribute="bottom" id="Rlr-VG-Tag"/>
+                            <constraint firstItem="CBj-0p-xEX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SAv-81-Yaf"/>
+                            <constraint firstItem="HAD-7i-Azc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="Vtu-Dc-lDn"/>
+                            <constraint firstItem="daP-5R-NXF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WPq-Nk-1Wr"/>
+                            <constraint firstItem="Ufo-Ed-yaV" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.5" id="YNT-t2-gZx"/>
+                            <constraint firstItem="kkw-2f-RLI" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.3" id="YTo-jG-TJf"/>
+                            <constraint firstItem="daP-5R-NXF" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.3" id="YVj-JN-kxW"/>
+                            <constraint firstItem="gJs-kb-Lpq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aGc-fF-taQ"/>
+                            <constraint firstAttribute="trailing" secondItem="5CS-JA-OKk" secondAttribute="trailing" id="afb-Ml-sUG"/>
+                            <constraint firstItem="aBk-96-gu6" firstAttribute="top" secondItem="pYS-U3-LFo" secondAttribute="bottom" constant="10" id="bQE-bD-dAF"/>
+                            <constraint firstItem="deS-72-D59" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dFb-q7-obs"/>
+                            <constraint firstItem="1np-yZ-Brb" firstAttribute="top" secondItem="Ufo-Ed-yaV" secondAttribute="bottom" constant="20" id="dIe-dP-Vfh"/>
+                            <constraint firstItem="deS-72-D59" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.04" id="dYZ-5z-bKt"/>
+                            <constraint firstItem="Ufo-Ed-yaV" firstAttribute="top" secondItem="uof-K9-IuV" secondAttribute="bottom" id="eIR-hp-Fup"/>
+                            <constraint firstItem="aBk-96-gu6" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.4" id="ed5-1e-lhi"/>
+                            <constraint firstItem="aBk-96-gu6" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.035" id="hEa-wN-zgy"/>
+                            <constraint firstItem="1np-yZ-Brb" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.05" id="hQH-RG-oWx"/>
+                            <constraint firstItem="Ufo-Ed-yaV" firstAttribute="top" secondItem="uof-K9-IuV" secondAttribute="bottom" id="hhR-lr-QBZ"/>
+                            <constraint firstItem="1Qg-c9-bvZ" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.05" id="iJR-KB-SUM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gJs-kb-Lpq" secondAttribute="trailing" id="jXF-3m-WsU"/>
+                            <constraint firstItem="ytC-Mf-pGQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kev-Vz-ViW"/>
+                            <constraint firstItem="deS-72-D59" firstAttribute="top" secondItem="5CS-JA-OKk" secondAttribute="bottom" id="lly-va-MvH"/>
+                            <constraint firstItem="deS-72-D59" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.5" id="nsp-xK-yj0"/>
+                            <constraint firstItem="5CS-JA-OKk" firstAttribute="top" secondItem="HAD-7i-Azc" secondAttribute="bottom" id="oVp-I3-yI3"/>
+                            <constraint firstItem="59A-Ym-KVj" firstAttribute="top" secondItem="ytC-Mf-pGQ" secondAttribute="bottom" id="pgL-dC-wr7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aBk-96-gu6" secondAttribute="trailing" constant="20" id="rE7-yi-TcH"/>
+                            <constraint firstItem="uof-K9-IuV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="srf-ic-bX7"/>
+                            <constraint firstItem="kkw-2f-RLI" firstAttribute="top" secondItem="59A-Ym-KVj" secondAttribute="bottom" id="tNH-8c-vws"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gJs-kb-Lpq" secondAttribute="bottom" id="u3k-bU-ztb"/>
+                            <constraint firstItem="59A-Ym-KVj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u57-sX-wff"/>
+                            <constraint firstItem="uof-K9-IuV" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.06" id="uby-fm-Nf1"/>
+                            <constraint firstItem="CBj-0p-xEX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vp2-WH-dcv"/>
+                            <constraint firstItem="Ufo-Ed-yaV" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.04" id="w0l-rs-Odh"/>
+                            <constraint firstItem="59A-Ym-KVj" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.15" id="wOo-gr-r80"/>
+                            <constraint firstItem="Ufo-Ed-yaV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xSH-To-tOb"/>
+                            <constraint firstItem="CBj-0p-xEX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yAN-e4-9hJ"/>
+                            <constraint firstItem="Ufo-Ed-yaV" firstAttribute="top" secondItem="uof-K9-IuV" secondAttribute="bottom" id="ycp-ms-bM0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

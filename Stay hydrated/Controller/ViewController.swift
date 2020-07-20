@@ -31,8 +31,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var wbgtLabel: UILabel!
     
     var graphHdata: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    
-    let dataList:[(text: String, amount: Int)] = [("ひと口　20ml", 20),("コップ半分 100ml", 100),("湯飲み1杯 120ml", 120),("コーヒーコップ1杯 150ml", 150),("コップ1杯 200ml", 200),("ペットボトル半分 250ml", 250),("ペットボトル１本 500ml", 500)]
+
+    let dataList:[(text: String, amount: Int)] = [("ひと口20ml", 20),("コップ半分100ml", 100),("湯飲み120ml", 120),("コーヒーカップ 150ml", 150),("コップ1杯200ml", 200),("ペットボトル半分250ml", 250),("ペットボトル1本500ml", 500)]
     
     var result = 0
     var inputValue = 0
@@ -47,10 +47,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        getWeathrData(row: 0)
-        
+ 
         configureObserver()
         CityPickerView.delegate = self
         CityPickerView.dataSource = self
@@ -63,6 +60,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         settingGoalButton.layer.cornerRadius = 30.0
         startButton.layer.cornerRadius = 30.0
         WeatherButton.layer.cornerRadius = 30.0
+        
+        getWeathrData(row: 0)
         allRead()
         Chart()
 
@@ -310,11 +309,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func allRead() {
         //初期値を決める
         let userDefaults = UserDefaults.standard
-        userDefaults.register(defaults: ["graphHdata": graphHdata,"totalIntakeLabel": "","goalTargeLabel": ""])
+        userDefaults.register(defaults: ["graphHdata": graphHdata,"totalIntakeLabel": "0 ","goalTargeLabel": "2500 ml"])
     
         graphHdata = UserDefaults.standard.object(forKey: "graphHdata") as! [Int]
         totalIntakeLabel.text = UserDefaults.standard.string(forKey: "totalIntakeLabel")
         goalTargeLabel.text = UserDefaults.standard.string(forKey: "goalTargeLabel")
+        totalIntakeLabel.text = "\(totalIntakeLabel.text!)  ml"
+        goalTargeLabel.text = "\(goalTargeLabel.text!)  "
     }
     //初期化
     @IBAction func initializationButton(_ sender: Any) {
@@ -325,10 +326,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         userDefaults.synchronize()
         
         graphHdata = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        totalIntakeLabel.text = "一日合計摂取量"
-        goalTargeLabel.text = "目標合計摂取量"
+        totalIntakeLabel.text = "0 ml"
+        goalTargeLabel.text = "2500 ml"
         Chart()
     }
-    
     
 }
