@@ -66,34 +66,34 @@
                                 <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日の天気" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1np-yZ-Brb">
-                                <rect key="frame" x="0.0" y="469" width="207" height="40"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="0.0" y="454" width="186.5" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最高気温" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qg-c9-bvZ">
-                                <rect key="frame" x="0.0" y="509" width="145" height="40"/>
+                                <rect key="frame" x="0.0" y="494" width="145" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暑さ指数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytC-Mf-pGQ">
-                                <rect key="frame" x="0.0" y="549" width="145" height="39.5"/>
+                                <rect key="frame" x="0.0" y="534" width="145" height="39.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59A-Ym-KVj">
-                                <rect key="frame" x="0.0" y="588.5" width="165.5" height="120"/>
+                                <rect key="frame" x="0.0" y="573.5" width="207" height="120"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在地を選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkw-2f-RLI">
-                                <rect key="frame" x="20" y="708.5" width="124" height="8"/>
+                                <rect key="frame" x="20" y="693.5" width="124" height="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daP-5R-NXF">
-                                <rect key="frame" x="20" y="736.5" width="124" height="40"/>
+                                <rect key="frame" x="20" y="711.5" width="124" height="48"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="天気を調べる"/>
@@ -157,10 +157,10 @@
                             <constraint firstItem="mKr-Qk-H7m" firstAttribute="top" secondItem="Ufo-Ed-yaV" secondAttribute="bottom" id="4m9-fB-0um"/>
                             <constraint firstItem="ytC-Mf-pGQ" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.05" id="5Cy-jy-C02"/>
                             <constraint firstItem="kkw-2f-RLI" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.01" id="5Kn-f9-XM3"/>
-                            <constraint firstItem="daP-5R-NXF" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.05" id="6iX-9r-boR"/>
+                            <constraint firstItem="daP-5R-NXF" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.06" id="6iX-9r-boR"/>
                             <constraint firstItem="pYS-U3-LFo" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.6" id="7Ze-2B-sg7"/>
-                            <constraint firstItem="59A-Ym-KVj" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.4" id="8Yy-hE-S1q"/>
-                            <constraint firstItem="daP-5R-NXF" firstAttribute="top" secondItem="kkw-2f-RLI" secondAttribute="bottom" constant="20" id="AhI-f0-zWb"/>
+                            <constraint firstItem="59A-Ym-KVj" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.5" id="8Yy-hE-S1q"/>
+                            <constraint firstItem="daP-5R-NXF" firstAttribute="top" secondItem="kkw-2f-RLI" secondAttribute="bottom" constant="10" id="AhI-f0-zWb"/>
                             <constraint firstItem="gJs-kb-Lpq" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.1" id="AiY-JT-b0I"/>
                             <constraint firstItem="pYS-U3-LFo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BKL-fn-2pW"/>
                             <constraint firstItem="mKr-Qk-H7m" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BmE-Hg-BP5"/>
@@ -173,7 +173,7 @@
                             <constraint firstItem="1Qg-c9-bvZ" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.35" id="MNY-qd-CLk"/>
                             <constraint firstItem="uof-K9-IuV" firstAttribute="top" secondItem="HAD-7i-Azc" secondAttribute="bottom" id="MmD-tJ-qTX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CBj-0p-xEX" secondAttribute="bottom" constant="20" id="Pft-rH-2y4"/>
-                            <constraint firstItem="1np-yZ-Brb" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.5" id="Pwf-NO-Rd7"/>
+                            <constraint firstItem="1np-yZ-Brb" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.45" id="Pwf-NO-Rd7"/>
                             <constraint firstItem="kkw-2f-RLI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QqH-xw-It3"/>
                             <constraint firstItem="1Qg-c9-bvZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qsh-SB-631"/>
                             <constraint firstItem="pYS-U3-LFo" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.03" id="Rfb-w7-X1u"/>
@@ -188,7 +188,7 @@
                             <constraint firstAttribute="trailing" secondItem="5CS-JA-OKk" secondAttribute="trailing" id="afb-Ml-sUG"/>
                             <constraint firstItem="aBk-96-gu6" firstAttribute="top" secondItem="pYS-U3-LFo" secondAttribute="bottom" constant="10" id="bQE-bD-dAF"/>
                             <constraint firstItem="deS-72-D59" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dFb-q7-obs"/>
-                            <constraint firstItem="1np-yZ-Brb" firstAttribute="top" secondItem="Ufo-Ed-yaV" secondAttribute="bottom" constant="20" id="dIe-dP-Vfh"/>
+                            <constraint firstItem="1np-yZ-Brb" firstAttribute="top" secondItem="Ufo-Ed-yaV" secondAttribute="bottom" constant="5" id="dIe-dP-Vfh"/>
                             <constraint firstItem="deS-72-D59" firstAttribute="height" secondItem="CBj-0p-xEX" secondAttribute="height" multiplier="0.04" id="dYZ-5z-bKt"/>
                             <constraint firstItem="Ufo-Ed-yaV" firstAttribute="top" secondItem="uof-K9-IuV" secondAttribute="bottom" id="eIR-hp-Fup"/>
                             <constraint firstItem="aBk-96-gu6" firstAttribute="width" secondItem="CBj-0p-xEX" secondAttribute="width" multiplier="0.4" id="ed5-1e-lhi"/>

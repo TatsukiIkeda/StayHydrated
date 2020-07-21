@@ -31,23 +31,23 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var wbgtLabel: UILabel!
     
     var graphHdata: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
+    
     let dataList:[(text: String, amount: Int)] = [("ひと口20ml", 20),("コップ半分100ml", 100),("湯飲み120ml", 120),("コーヒーカップ 150ml", 150),("コップ1杯200ml", 200),("ペットボトル半分250ml", 250),("ペットボトル1本500ml", 500)]
     
     var result = 0
     var inputValue = 0
     var urlData = ""
-    var cityData:[String] = ["011000","稚内"]
+    var cityData:[String] = ["011000","北海道"]
     var cityList = CityList()
     var date = ""
     var weather = ""
     var high = "0"
     
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
         configureObserver()
         CityPickerView.delegate = self
         CityPickerView.dataSource = self
@@ -60,11 +60,10 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         settingGoalButton.layer.cornerRadius = 30.0
         startButton.layer.cornerRadius = 30.0
         WeatherButton.layer.cornerRadius = 30.0
-        
-        getWeathrData(row: 0)
         allRead()
+        getWeathrData(row: 0)
         Chart()
-
+        
     }
     
     // Notificationを設定
@@ -121,6 +120,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         let entries = graphHdata.enumerated().map { BarChartDataEntry(x: Double(Int($0.offset)), y: Double($0.element)) }
         let dataSet = BarChartDataSet(entries: entries)
         dataSet.drawValuesEnabled = false
+        dataSet.colors = [.systemBlue]
         let data = BarChartData(dataSet: dataSet)
         barChartView.data = data
     }
@@ -237,7 +237,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                 }
                 
                 if weather != nil {
-                    self.weather = "天気は\(weather!)です"
+                    self.weather = "  天気は\(weather!)です"
                 } else {
                     self.weather = "No Data"
                 }
@@ -247,7 +247,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                 } else {
                     self.high = "0"
                 }
-//
+                //
                 self.setWeatherData(row: 0)
                 self.allSave()
             case .failure(let error):
@@ -287,10 +287,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
             wbgtLabel.textColor = .white
         }
         if "\(high)" == "0" {
-            maximumTemperatureLabel.text = "この時間帯は"
+            maximumTemperatureLabel.text = "この時間帯の気温は"
             wbgtLabel.text = "取得できません"
             maximumTemperatureLabel.backgroundColor = .yellow
             wbgtLabel.backgroundColor = .yellow
+            wbgtLabel.textColor = .black
         }
     }
     func wbgtJudgment() {
@@ -310,7 +311,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         //初期値を決める
         let userDefaults = UserDefaults.standard
         userDefaults.register(defaults: ["graphHdata": graphHdata,"totalIntakeLabel": "0 ","goalTargeLabel": "2500 ml"])
-    
+        
         graphHdata = UserDefaults.standard.object(forKey: "graphHdata") as! [Int]
         totalIntakeLabel.text = UserDefaults.standard.string(forKey: "totalIntakeLabel")
         goalTargeLabel.text = UserDefaults.standard.string(forKey: "goalTargeLabel")
@@ -321,8 +322,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBAction func initializationButton(_ sender: Any) {
         let userDefaults = UserDefaults.standard
         if let domain = Bundle.main.bundleIdentifier {
-                    userDefaults.removePersistentDomain(forName: domain)
-                }
+            userDefaults.removePersistentDomain(forName: domain)
+        }
         userDefaults.synchronize()
         
         graphHdata = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
